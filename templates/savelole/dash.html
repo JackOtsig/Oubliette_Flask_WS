@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+    <style>
+        h2      {color: red;}
+        body    {background-color: SlateGrey; font-family: "Lucida Console", "Courier New", monospace;}
+    </style>
+    <head>
+        <h2>
+            <i>the oubliette</i><br>
+        </h2>
+    </head>
+    <body>
+        <p>
+            Welcome to the Oubliette, { username }
+            
+        </p>
+        {% for message in get_flashed_messages() %}
+            {{ message }}
+        {% endfor %}
+    </body>
+    <footer>
+        <a href="{{ url_for('logout') }}">log out</a>
+    </footer>
+</html>
